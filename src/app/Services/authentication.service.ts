@@ -66,7 +66,7 @@ export class AuthenticationService {
 			phoneNo: undefined,
 			password: undefined,
 			role: undefined,
-			profileImg: 'assets/images/user-5.jpg'
+			profileImg: 'assets/images/not-logged-in-user.png'
 		};
 		this.router.navigateByUrl('/');
 	}

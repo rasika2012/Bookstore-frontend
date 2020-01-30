@@ -5,34 +5,20 @@
       <form [formGroup] = "info">
         <div class="example-container">
           <mat-form-field class="w-100 mb-3">
-            <input matInput placeholder="First Name" formControlName="first_name">
-            <mat-error *ngIf="info.get('first_name').hasError('required') && info.get('first_name').touched">This field should not be empty.</mat-error>
+            <input matInput placeholder="First Name" formControlName="fname">
+            <mat-error *ngIf="info.get('fname').hasError('required') && info.get('fname').touched">This field should not be empty.</mat-error>
           </mat-form-field>
           <mat-form-field class="w-100 mb-3">
-            <input matInput placeholder="Last Name" formControlName="last_name">
-            <mat-error *ngIf="info.get('last_name').hasError('required') && info.get('last_name').touched">This field should not be empty.</mat-error>
-          </mat-form-field>
-          <div class="mb-3">
-            <mat-radio-group formControlName="gender">
-              <mat-radio-button class="mr-2" value="male">Male</mat-radio-button>
-              <mat-radio-button value="female">Female</mat-radio-button>
-            </mat-radio-group>
-          </div>
-          <div>
-            <mat-form-field class="w-100 mb-3">
-              <input matInput [matDatepicker]="picker" placeholder="Bith Date" formControlName="date">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-              <mat-error *ngIf="info.get('date').hasError('required') && info.get('date').touched">This field should not be empty.</mat-error>
-            </mat-form-field>
-          </div>
-          <mat-form-field class="w-100 mb-3">
-            <input matInput placeholder="Mobile No." formControlName="phone_number">
-            <mat-error *ngIf="info.get('phone_number').hasError('required') && info.get('phone_number').touched">This field should not be empty.</mat-error>
+            <input matInput placeholder="Last Name" formControlName="lname">
+            <mat-error *ngIf="info.get('lname').hasError('required') && info.get('lname').touched">This field should not be empty.</mat-error>
           </mat-form-field>
           <mat-form-field class="w-100 mb-3">
-            <input matInput placeholder="Location" formControlName="location">
-            <mat-error *ngIf="info.get('location').hasError('required') && info.get('location').touched">This field should not be empty.</mat-error>
+            <input matInput placeholder="Mobile No." formControlName="phoneNo">
+            <mat-error *ngIf="info.get('phoneNo').hasError('required') && info.get('phoneNo').touched">This field should not be empty.</mat-error>
+          </mat-form-field>
+          <mat-form-field class="w-100 mb-3">
+            <input matInput placeholder="Address" formControlName="address">
+            <mat-error *ngIf="info.get('address').hasError('required') && info.get('address').touched">This field should not be empty.</mat-error>
           </mat-form-field>
 
           <mat-form-field class="w-100 mb-3">
