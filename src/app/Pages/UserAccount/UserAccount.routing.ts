@@ -6,32 +6,33 @@ import { EditProfileComponent } from './EditProfile/EditProfile.component';
 import { CardsComponent } from './Cards/Cards.component';
 import { AddressComponent } from './Address/Address.component';
 import { OrderHistoryComponent } from './OrderHistory/OrderHistory.component';
+import { AuthGuardService } from 'src/app/Services/auth-guard.service';
 
-export const UserAccountRoutes : Routes = [
-   {
-      path : '',
-      component : AccountComponent,
-      children: [ 
-         {
-            path: 'profile',
-            component: ProfileComponent
-         },
-         { 
-            path: 'cards', 
-            component: CardsComponent 
-         },
-         { 
-            path: 'address', 
-            component: AddressComponent 
-         },
-         { 
-            path: 'order-history', 
-            component: OrderHistoryComponent 
-         },
-         {
-            path: 'profile/edit',
-            component: EditProfileComponent
-         }
-      ]
-   }
+export const UserAccountRoutes: Routes = [
+	{
+		path : '',
+		component : AccountComponent, canActivate: [AuthGuardService],
+		children: [
+			{
+				path: 'profile',
+				component: ProfileComponent
+			},
+			{
+				path: 'cards',
+				component: CardsComponent
+			},
+			{
+				path: 'address',
+				component: AddressComponent
+			},
+			{
+				path: 'order-history',
+				component: OrderHistoryComponent
+			},
+			{
+				path: 'profile/edit',
+				component: EditProfileComponent
+			}
+		]
+	}
 ]

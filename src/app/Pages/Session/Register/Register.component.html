@@ -13,24 +13,25 @@
               <form>
                 <div class="mb-4">
                   <mat-form-field class="w-100">
-                    <input matInput type="text" placeholder="First Name" required>
+                    <input matInput type="text" name="fname" placeholder="First Name" [(ngModel)]="user.fname" required>
                   </mat-form-field>
                   <mat-form-field class="w-100">
-                    <input matInput type="text" placeholder="Last Name" required>
+                    <input matInput type="text" name="lname" placeholder="Last Name" [(ngModel)]="user.lname" required>
                   </mat-form-field>
                   <mat-form-field class="w-100">
-                    <input matInput type="email" placeholder="Email" required>
+                    <input matInput type="email" name="email" [(ngModel)]="user.email" placeholder="Email">
                   </mat-form-field>
                   <mat-form-field class="w-100">
-                    <input matInput type="password" placeholder="Enter Password" required>
+                    <input matInput type="tel" name="phoneNo" placeholder="Phone Number" [(ngModel)]="user.phoneNo" required>
+                  </mat-form-field>
+                  <mat-form-field class="w-100">
+                    <input matInput type="password" name="password" [(ngModel)]="user.password" placeholder="Enter Password" required>
+                  </mat-form-field>
+                  <mat-form-field class="w-100">
+                    <input matInput type="password" name="rePassword" placeholder="Retype Password" [(ngModel)]="rPassword" required>
                   </mat-form-field>
                 </div>
-                <div class="mb-4">
-                  <mat-form-field class="w-100">
-                    <input matInput type="password" placeholder="Retype Password" required>
-                  </mat-form-field>
-                </div>
-                <button color="accent" class="button-lg mb-3" mat-raised-button>Submit</button>
+                <button color="accent" class="button-lg mb-3" mat-raised-button (click)="register()">Submit</button>
               <div> Already have account? then <a class="accent-color" [routerLink]="['/session/signin']">Sign In</a></div>
               </form>
             </mat-card>

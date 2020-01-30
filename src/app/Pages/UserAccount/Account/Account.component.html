@@ -5,11 +5,11 @@
         <div>
           <div fxLayoutAlign="flex-start">
             <div class="login-user-img">
-              <img src="assets/images/user-4.jpg" width="70" alt="Active User">
+              <img src="{{user.profileImg}}" width="70" alt="Active User">
             </div>
             <div class="px-3">
-              <h4>Hi, John Doe</h4>
-              <div class="text-muted text-xl">johndoe@deo.com</div>
+              <h4>Hi, {{user.fname}} {{user.lname}}</h4>
+              <div class="text-muted text-xl">{{user.email}}</div>
             </div>
           </div>
         </div>

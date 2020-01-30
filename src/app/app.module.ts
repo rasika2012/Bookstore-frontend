@@ -66,6 +66,11 @@ import { NotFoundComponent } from './Pages/NotFound/NotFound.component';
 import { SideBarMenuComponent } from './Layouts/Menu/SidebarMenu/SidebarMenu.component';
 import { PaymentDetailSideBarComponent } from './Layouts/PaymentDetailSideBar/PaymentDetailSideBar.component';
 import { FixedHeaderComponent } from './Layouts/Header/FixedHeader/FixedHeader.component';
+import { AuthGuardService } from './Services/auth-guard.service';
+import { AuthenticationService } from './Services/authentication.service';
+import { NotificationService } from './Services/notification.service';
+import { RoleGuardAdminService } from './Services/role-guard-admin.service';
+import { RoleGuardBussinessOwnerService } from './Services/role-guard-bussiness-owner.service';
 
 
 /********** Custom option for ngx-translate ******/
@@ -144,7 +149,12 @@ export function createTranslateLoader(http: HttpClient) {
   ],
    providers: [
       MenuItems,
-      EmbryoService
+      EmbryoService,
+      AuthGuardService,
+      AuthenticationService,
+      NotificationService,
+      RoleGuardAdminService,
+      RoleGuardBussinessOwnerService
    ],
    bootstrap: [AppComponent]
 })
